@@ -32,6 +32,11 @@ register_taxonomy(
     )
 );
 
+register_taxonomy_for_object_type( 
+    'item_type',
+    'menu' 
+);
+
 function benito_generate_menu_posts($atts) {
     $args = array(
         'post_type' => $atts['post_type'],
