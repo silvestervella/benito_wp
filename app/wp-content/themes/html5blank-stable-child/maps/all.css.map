@@ -1,0 +1,1 @@
+{"version":3,"sources":["_generic.scss"],"names":[],"mappings":"AASA,KACI,WAAA","file":"../scss/all.css","sourcesContent":["/* Variables */\r\n$primary-font: Helvetica, sans-serif;\r\n$secondary-font: Helvetica, sans-serif;\r\n\r\n$primary-color: #AED8B9;\r\n$secondary-color: #F97E7E;\r\n$grey-color: #333;\r\n\r\n\r\nbody {\r\n    background: #fff;\r\n}"]}
