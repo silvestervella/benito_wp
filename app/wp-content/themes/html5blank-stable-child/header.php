@@ -36,7 +36,7 @@
 									<?php benito_get_logo() ?>
 								</div>
 							</a>
-							<button id="close-nav"><i class="large material-icons">menu</i></button>
+							<button id="close-nav"><i class="fas fa-bars"></i></button>
 							<div id="nav-collapse">
 								<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
 							</div>
