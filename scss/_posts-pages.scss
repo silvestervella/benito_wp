@@ -1,0 +1,90 @@
+.about {
+    .section-title {
+        background: $primary-color;
+    }
+    .section-content {
+        background: white;
+        margin: 0 15px;
+    }
+    .section-custom {
+        position: relative;
+        h3 {
+            position: absolute;
+            bottom: 30px;
+            left: 15px;
+            color: white;
+            font-size: 35px;
+            margin: 0;
+        }
+        img {
+            display: block;
+        }
+    }
+}
+
+.menu {
+    .section-title {
+        background: $secondary-color;
+    }
+    .section-content {
+        background: white;
+        margin: 0 15px;
+    }
+    .section-custom {
+        position: relative;
+        h3 {
+            position: absolute;
+            bottom: 30px;
+            left: 15px;
+            color: white;
+            font-size: 35px;
+            margin: 0;
+        }
+        .menu-type {
+            &:nth-child(even) {
+                .menu-item {
+                    .menu-thumb {
+                        text-align: left;
+                    }
+                }
+            }
+            .menu-item {
+                .menu-thumb {
+                    height: 150px;
+                    text-align: right;
+                    width: 100%;
+                    overflow: hidden;
+                    .thumb-wrap {
+                        width: 70%;
+                        overflow: hidden;
+                        display: block;
+                        height: inherit;
+                        position: relative;
+                        float: right;
+                        img {
+                            position: relative;
+                            height: auto;
+                            width: 100%;
+                            display: block;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+                .item-desc {
+                    width: 70%;
+                    margin: 0 0 0 15px;
+                    background: white;
+                    padding: 15px;
+                    transform: translateY(-30px);
+                    box-shadow: 0 5px 5px -2px lighten($grey-color , 50%);
+                    .menu-title {
+                        font-family: $secondary-font;
+                        font-weight: 100;
+                        margin: 5px 0;
+                    }
+                }
+            }
+        }
+    }
+}

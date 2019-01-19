@@ -1,0 +1,53 @@
+header#header {
+    position: fixed;
+    width: 100%;
+    #main-nav-outer {
+        .navbar {
+            width: 100%;
+            text-align: right;
+            a {
+                div {
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    svg {
+                        max-width: 250px;
+                        height: 60px;
+                    }
+                }
+            }
+            button {
+                background: 0 0;
+                border: 0;
+                padding: 15px;
+                i {
+                    display: block;
+                }
+            }
+            #nav-collapse {
+                padding-top: 50px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 100%;
+                background: white;
+                transform: translateY(-100%);
+                display: none;
+                ul {
+                    list-style-type: none;
+                    padding: 0;
+                    li {
+                        text-align: right;
+                        padding: 10px;
+                        &.current_page_item {
+                            padding-right: 30px
+                        } 
+                        a {
+                            color: red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

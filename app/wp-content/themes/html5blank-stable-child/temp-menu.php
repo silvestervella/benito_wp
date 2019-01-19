@@ -4,26 +4,32 @@
  */
 
 ?>
-<?php get_header(); ?>
+<?php define( 'WP_USE_THEMES', false ); get_header(); ?>
 
 </section>
 <!-- /#top -->
 
-<section id="menu-page">
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+<section id="menu-page"  class="menu">
     <div class="section-title">
-        <h1><?php echo $post_menu->post_title ?>
-            <span><?php echo get_post_meta($post_menu->ID, "menu-title-tagline", true); ?></span>
+        <h1><?php the_title() ?>
+            <span><?php echo get_post_meta($post_id, "menu-title-tagline", true); ?></span>
         </h1>
     </div>
 
     <div class="section-content">
-        <?php echo $post_menu->post_content ?>
+        <?php the_content(); ?>
     </div>
 
     <div class="section-custom">
-
+        <div id="download-menu"><i class="large material-icons">restaurant_menu</i>Download</div>
     </div>
 </section> 
-<!-- /#home-about -->
+<!-- /#menu-page -->
+
+<?php endwhile; else : ?>
+	<p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
+<?php endif; ?>
 
 <?php get_footer();?>

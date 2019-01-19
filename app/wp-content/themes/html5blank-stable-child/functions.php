@@ -6,8 +6,9 @@
  * 0.3 Output a single menu item + link
  * 
  * 1. Register and enqueue script and styles
- * 2. Add theme support
+ * 2. Add theme and post type support
  * 3. Add custom logo + check for svg
+ * 4. Add top section background selector in customizer
  */
 
 
@@ -16,8 +17,7 @@
  */
 
 /* 0.1 Variables */
-$post_about = get_post(14); 
-$post_menu = get_post(19); 
+
 
 
 /* 0.2 Front page sections Id incrementor  */
@@ -86,14 +86,21 @@ add_action('wp_enqueue_scripts', 'benito_styles_child', 20); // Add Theme Child 
 
 
 /**
- * 2. Add theme support
+ * 2. Add theme and post type support
  */
 function benito_setup() {
 	add_theme_support( 'custom-logo', array(
 		'height'      => 100,
 		'width'       => 400,
 		'flex-width' => true,
-	) );
+    ) );
+    add_theme_support( 'custom-background', array(
+        'wp-head-callback' => 'benito_set_top_home_back',
+        'default-color'    => '000000',
+        'default-image'    => '%1$s/images/background.jpg',
+    ));
+
+    add_post_type_support( 'page', 'excerpt' );
 }
 add_action( 'after_setup_theme', 'benito_setup' );
 
@@ -114,4 +121,15 @@ function benito_get_logo() {
      }
 }
 
+
+/*
+ * 4. Add top section background selector in customizer
+*/
+function benito_set_top_home_back() {
+    ob_start();
+    _custom_background_cb(); // Default handler
+    $style = ob_get_clean();
+    $style = str_replace( 'body.custom-background', '#top', $style );
+    echo $style;
+}
 ?>

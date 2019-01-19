@@ -1,0 +1,40 @@
+footer {
+    .footer-sec {
+        padding: 15px 15px 30px 15px
+    }
+    background: $primary-color;
+    #addr-hrs-outer {
+        h3 {
+            font-family: $secondary-font;
+            font-size: 24px;
+            font-weight: 100;
+        }
+        #add-hrs {
+            .contact-label {
+                padding: 0 0 10px 0 ; 
+            }
+            .contact-info{
+                padding: 10px 0 10px 0;
+            }
+            #contact-hrs {
+                div {
+                    width: 100%;
+                    text-align: center;
+                    span {
+                        min-width: 120px;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+    #footer-chat {
+        background: white;
+        text-align: center;
+        padding: 20px;
+        a, a:hover, a:active, a:focus {
+            text-decoration: none;
+            color: $grey-color;
+        }
+    }
+}
