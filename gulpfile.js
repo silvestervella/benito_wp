@@ -90,7 +90,7 @@ gulp.task('deploysftp', function(){
             .pipe(sftp({
                 host:     'eternagames.com',
                 user:     'eter41859568171',
-                password: 'zZW5W{obRXV',
+                password: '',
                 remotePath: serverChildDir
             }));
 });
